@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE984524-8C91-470A-A056-1CAA8C27C81E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BILLING</RootNamespace>
+    <AssemblyName>BILLING</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BILLINGDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BILLINGDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="common.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\EDIT\FrmChangeItemName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\EDIT\FrmChangeItemName.Designer.cs">
+      <DependentUpon>FrmChangeItemName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\FrmCmpnyLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\FrmCmpnyLogin.Designer.cs">
+      <DependentUpon>FrmCmpnyLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Login\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login\FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmAccountMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmAccountMaster.Designer.cs">
+      <DependentUpon>FrmAccountMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmBackUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmBackUp.Designer.cs">
+      <DependentUpon>FrmBackUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmBillSeries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmBillSeries.Designer.cs">
+      <DependentUpon>FrmBillSeries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmCreateTax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmCreateTax.Designer.cs">
+      <DependentUpon>FrmCreateTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\frmEmployeeRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\frmEmployeeRegister.Designer.cs">
+      <DependentUpon>frmEmployeeRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmGodownName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmGodownName.Designer.cs">
+      <DependentUpon>FrmGodownName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmItemGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmItemGroup.Designer.cs">
+      <DependentUpon>FrmItemGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmItemMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmItemMaster.Designer.cs">
+      <DependentUpon>FrmItemMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmNewAccountGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmNewAccountGroup.Designer.cs">
+      <DependentUpon>FrmNewAccountGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Masters\FrmUnitMaster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmUnitMaster.Designer.cs">
+      <DependentUpon>FrmUnitMaster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MDI\FrmMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MDI\FrmMDI.Designer.cs">
+      <DependentUpon>FrmMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Search\FrmaccountHeadsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Search\FrmaccountHeadsList.Designer.cs">
+      <DependentUpon>FrmaccountHeadsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Search\FrmCommonSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Search\FrmCommonSearch.Designer.cs">
+      <DependentUpon>FrmCommonSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Search\FrmItemGrpSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Search\FrmItemGrpSearch.Designer.cs">
+      <DependentUpon>FrmItemGrpSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Search\FrmItemMasterSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Search\FrmItemMasterSearch.Designer.cs">
+      <DependentUpon>FrmItemMasterSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Search\FrmUnitMasterSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Search\FrmUnitMasterSearch.Designer.cs">
+      <DependentUpon>FrmUnitMasterSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Stock\FrmStockEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Stock\FrmStockEntry.Designer.cs">
+      <DependentUpon>FrmStockEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Utils\FrmAdUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Utils\FrmAdUser.Designer.cs">
+      <DependentUpon>FrmAdUser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View\EDIT\FrmChangeItemName.resx">
+      <DependentUpon>FrmChangeItemName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\FrmCmpnyLogin.resx">
+      <DependentUpon>FrmCmpnyLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login\FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmAccountMaster.resx">
+      <DependentUpon>FrmAccountMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmBackUp.resx">
+      <DependentUpon>FrmBackUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmBillSeries.resx">
+      <DependentUpon>FrmBillSeries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmCreateTax.resx">
+      <DependentUpon>FrmCreateTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\frmEmployeeRegister.resx">
+      <DependentUpon>frmEmployeeRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmGodownName.resx">
+      <DependentUpon>FrmGodownName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmItemGroup.resx">
+      <DependentUpon>FrmItemGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmItemMaster.resx">
+      <DependentUpon>FrmItemMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmNewAccountGroup.resx">
+      <DependentUpon>FrmNewAccountGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmUnitMaster.resx">
+      <DependentUpon>FrmUnitMaster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MDI\FrmMDI.resx">
+      <DependentUpon>FrmMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Search\FrmaccountHeadsList.resx">
+      <DependentUpon>FrmaccountHeadsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Search\FrmCommonSearch.resx">
+      <DependentUpon>FrmCommonSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Search\FrmItemGrpSearch.resx">
+      <DependentUpon>FrmItemGrpSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Search\FrmItemMasterSearch.resx">
+      <DependentUpon>FrmItemMasterSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Search\FrmUnitMasterSearch.resx">
+      <DependentUpon>FrmUnitMasterSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Stock\FrmStockEntry.resx">
+      <DependentUpon>FrmStockEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Utils\FrmAdUser.resx">
+      <DependentUpon>FrmAdUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="BILLINGDataSet.xsc">
+      <DependentUpon>BILLINGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BILLINGDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BILLINGDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BILLINGDataSet.xss">
+      <DependentUpon>BILLINGDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\001.jpg" />
+    <Content Include="Images\0012.jpg" />
+    <Content Include="Images\Flower Mdi Frm Bg.jpg" />
+    <Content Include="Images\MAGNAORIGINAL-ILLLIPARAMBIL.jpg" />
+    <Content Include="Images\MAGNAORIGINAL.jpg" />
+    <Content Include="Images\printer.gif" />
+    <Content Include="Images\search_over.gif" />
+    <None Include="Resources\0012.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BillingDAL\BillingDAL.csproj">
+      <Project>{2C0DEA4C-2E22-43BD-9534-15A23E45396D}</Project>
+      <Name>BillingDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
