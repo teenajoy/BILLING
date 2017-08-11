@@ -87,6 +87,7 @@
             this.GroupBox1.Controls.Add(this.Label1);
             this.GroupBox1.Controls.Add(this.Label20);
             this.GroupBox1.Controls.Add(this.Label19);
+            this.GroupBox1.Enabled = false;
             this.GroupBox1.Location = new System.Drawing.Point(12, 12);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(659, 463);
@@ -486,6 +487,7 @@
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.GroupBox1);
             this.Controls.Add(this.GroupSave);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmCreateTax";
             this.Text = "FrmCreateTax";
             this.Load += new System.EventHandler(this.FrmCreateTax_Load);

@@ -37,6 +37,7 @@
             this.createGodownNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeItemNameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.accountMasterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewAccountHeadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewAccountGroupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.createNewTaxToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,8 +50,10 @@
             this.utilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.securityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +64,7 @@
             this.companyToolStripMenuItem,
             this.extrasToolStripMenuItem,
             this.utilsToolStripMenuItem,
+            this.preToolStripMenuItem,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -135,6 +139,13 @@
             this.accountMasterToolStripMenuItem.Name = "accountMasterToolStripMenuItem";
             this.accountMasterToolStripMenuItem.Size = new System.Drawing.Size(192, 22);
             this.accountMasterToolStripMenuItem.Text = "Account Master";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(219, 22);
+            this.toolStripMenuItem1.Text = "Account Heads-List";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // createNewAccountHeadToolStripMenuItem
             // 
@@ -225,6 +236,22 @@
             this.addUserToolStripMenuItem.Text = "Add User";
             this.addUserToolStripMenuItem.Click += new System.EventHandler(this.addUserToolStripMenuItem_Click);
             // 
+            // preToolStripMenuItem
+            // 
+            this.preToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stockToolStripMenuItem,
+            this.masterItemsToolStripMenuItem});
+            this.preToolStripMenuItem.Name = "preToolStripMenuItem";
+            this.preToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.preToolStripMenuItem.Text = "Preview";
+            // 
+            // stockToolStripMenuItem
+            // 
+            this.stockToolStripMenuItem.Name = "stockToolStripMenuItem";
+            this.stockToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.stockToolStripMenuItem.Text = "Stock";
+            this.stockToolStripMenuItem.Click += new System.EventHandler(this.stockToolStripMenuItem_Click);
+            // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
@@ -232,12 +259,12 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem1
+            // masterItemsToolStripMenuItem
             // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(219, 22);
-            this.toolStripMenuItem1.Text = "Account Heads-List";
-            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            this.masterItemsToolStripMenuItem.Name = "masterItemsToolStripMenuItem";
+            this.masterItemsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.masterItemsToolStripMenuItem.Text = "Master Items";
+            this.masterItemsToolStripMenuItem.Click += new System.EventHandler(this.masterItemsToolStripMenuItem_Click);
             // 
             // FrmMDI
             // 
@@ -286,5 +313,8 @@
         private System.Windows.Forms.ToolStripMenuItem securityToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem preToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterItemsToolStripMenuItem;
     }
 }

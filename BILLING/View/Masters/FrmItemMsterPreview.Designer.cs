@@ -1,6 +1,6 @@
-﻿namespace BILLING.View.Search
+﻿namespace BILLING.View.Masters
 {
-    partial class FrmCommonSearch
+    partial class FrmItemMsterPreview
     {
         /// <summary>
         /// Required designer variable.
@@ -30,29 +30,26 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCommonSearch));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmItemMsterPreview));
+            this.GroupBox2 = new System.Windows.Forms.GroupBox();
             this.gdv_CommonSearch = new System.Windows.Forms.DataGridView();
-            this.TextBox1 = new System.Windows.Forms.TextBox();
-            this.TextGRNAME = new System.Windows.Forms.TextBox();
+            this.GroupAdd = new System.Windows.Forms.GroupBox();
             this.ButtonExit = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.ButtonAdd = new System.Windows.Forms.Button();
+            this.GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_CommonSearch)).BeginInit();
+            this.GroupAdd.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // GroupBox2
             // 
-            this.groupBox1.Controls.Add(this.gdv_CommonSearch);
-            this.groupBox1.Controls.Add(this.TextBox1);
-            this.groupBox1.Controls.Add(this.TextGRNAME);
-            this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.groupBox1.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.groupBox1.Location = new System.Drawing.Point(12, 22);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(718, 377);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "LIST";
+            this.GroupBox2.Controls.Add(this.gdv_CommonSearch);
+            this.GroupBox2.Location = new System.Drawing.Point(12, 12);
+            this.GroupBox2.Name = "GroupBox2";
+            this.GroupBox2.Size = new System.Drawing.Size(1065, 540);
+            this.GroupBox2.TabIndex = 247;
+            this.GroupBox2.TabStop = false;
+            this.GroupBox2.Text = "Item Master Preview";
             // 
             // gdv_CommonSearch
             // 
@@ -64,7 +61,7 @@
             this.gdv_CommonSearch.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gdv_CommonSearch.BackgroundColor = System.Drawing.SystemColors.Control;
             this.gdv_CommonSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gdv_CommonSearch.Location = new System.Drawing.Point(3, 50);
+            this.gdv_CommonSearch.Location = new System.Drawing.Point(6, 34);
             this.gdv_CommonSearch.Name = "gdv_CommonSearch";
             this.gdv_CommonSearch.ReadOnly = true;
             this.gdv_CommonSearch.RowHeadersWidth = 25;
@@ -76,71 +73,74 @@
             this.gdv_CommonSearch.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gdv_CommonSearch.RowTemplate.Height = 18;
             this.gdv_CommonSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gdv_CommonSearch.Size = new System.Drawing.Size(711, 322);
-            this.gdv_CommonSearch.TabIndex = 7;
-            this.gdv_CommonSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gdv_CommonSearch_KeyDown);
-            this.gdv_CommonSearch.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gdv_CommonSearch_MouseDoubleClick);
+            this.gdv_CommonSearch.Size = new System.Drawing.Size(1054, 488);
+            this.gdv_CommonSearch.TabIndex = 9;
             // 
-            // TextBox1
+            // GroupAdd
             // 
-            this.TextBox1.BackColor = System.Drawing.Color.Blue;
-            this.TextBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox1.ForeColor = System.Drawing.Color.White;
-            this.TextBox1.Location = new System.Drawing.Point(3, 30);
-            this.TextBox1.Name = "TextBox1";
-            this.TextBox1.Size = new System.Drawing.Size(207, 23);
-            this.TextBox1.TabIndex = 6;
-            this.TextBox1.Text = "SEARCH HERE -";
-            // 
-            // TextGRNAME
-            // 
-            this.TextGRNAME.BackColor = System.Drawing.Color.LavenderBlush;
-            this.TextGRNAME.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextGRNAME.ForeColor = System.Drawing.Color.Black;
-            this.TextGRNAME.Location = new System.Drawing.Point(209, 30);
-            this.TextGRNAME.Name = "TextGRNAME";
-            this.TextGRNAME.Size = new System.Drawing.Size(505, 23);
-            this.TextGRNAME.TabIndex = 5;
-            this.TextGRNAME.TextChanged += new System.EventHandler(this.TextGRNAME_TextChanged);
-            this.TextGRNAME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextGRNAME_KeyDown);
+            this.GroupAdd.BackColor = System.Drawing.Color.Plum;
+            this.GroupAdd.Controls.Add(this.ButtonExit);
+            this.GroupAdd.Controls.Add(this.ButtonAdd);
+            this.GroupAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.GroupAdd.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.GroupAdd.Location = new System.Drawing.Point(18, 558);
+            this.GroupAdd.Name = "GroupAdd";
+            this.GroupAdd.Size = new System.Drawing.Size(1054, 45);
+            this.GroupAdd.TabIndex = 263;
+            this.GroupAdd.TabStop = false;
             // 
             // ButtonExit
             // 
             this.ButtonExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonExit.Image = ((System.Drawing.Image)(resources.GetObject("ButtonExit.Image")));
             this.ButtonExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonExit.Location = new System.Drawing.Point(331, 414);
+            this.ButtonExit.Location = new System.Drawing.Point(520, 10);
             this.ButtonExit.Name = "ButtonExit";
             this.ButtonExit.Size = new System.Drawing.Size(80, 29);
-            this.ButtonExit.TabIndex = 12;
+            this.ButtonExit.TabIndex = 10;
             this.ButtonExit.Text = "&Exit";
             this.ButtonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ButtonExit.UseVisualStyleBackColor = true;
             this.ButtonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
-            // FrmCommonSearch
+            // ButtonAdd
+            // 
+            this.ButtonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonAdd.Image = ((System.Drawing.Image)(resources.GetObject("ButtonAdd.Image")));
+            this.ButtonAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtonAdd.Location = new System.Drawing.Point(404, 10);
+            this.ButtonAdd.Name = "ButtonAdd";
+            this.ButtonAdd.Size = new System.Drawing.Size(80, 29);
+            this.ButtonAdd.TabIndex = 0;
+            this.ButtonAdd.Text = "&Refresh";
+            this.ButtonAdd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ButtonAdd.UseVisualStyleBackColor = true;
+            this.ButtonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            // 
+            // FrmItemMsterPreview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(798, 522);
-            this.Controls.Add(this.ButtonExit);
-            this.Controls.Add(this.groupBox1);
-            this.Name = "FrmCommonSearch";
-            this.Text = "FrmCommonSearch";
-            this.Load += new System.EventHandler(this.FrmCommonSearch_Load);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.ClientSize = new System.Drawing.Size(1089, 615);
+            this.Controls.Add(this.GroupAdd);
+            this.Controls.Add(this.GroupBox2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmItemMsterPreview";
+            this.Text = "FrmItemMsterPreview";
+            this.Load += new System.EventHandler(this.FrmItemMsterPreview_Load);
+            this.GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gdv_CommonSearch)).EndInit();
+            this.GroupAdd.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        internal System.Windows.Forms.GroupBox GroupBox2;
         internal System.Windows.Forms.DataGridView gdv_CommonSearch;
-        internal System.Windows.Forms.TextBox TextBox1;
-        internal System.Windows.Forms.TextBox TextGRNAME;
+        internal System.Windows.Forms.GroupBox GroupAdd;
         internal System.Windows.Forms.Button ButtonExit;
+        internal System.Windows.Forms.Button ButtonAdd;
     }
 }

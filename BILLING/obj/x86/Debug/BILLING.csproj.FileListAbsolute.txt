@@ -74,3 +74,5 @@ D:\BILLING\BILLING\obj\x86\Debug\BILLING.View.Masters.FrmCreateTax.resources
 D:\BILLING\BILLING\obj\x86\Debug\BILLING.View.Stock.FrmStockEntry.resources
 D:\BILLING\BILLING\obj\x86\Debug\BILLING.View.Utils.FrmAdUser.resources
 D:\BILLING\BILLING\obj\x86\Debug\BILLING.View.Search.FrmaccountHeadsList.resources
+D:\BILLING\BILLING\obj\x86\Debug\BILLING.View.Stock.FrmStockPreview.resources
+D:\BILLING\BILLING\obj\x86\Debug\BILLING.View.Masters.FrmItemMsterPreview.resources

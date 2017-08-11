@@ -147,9 +147,9 @@ namespace BILLING.View.Masters
                         Textcategory.Text = dt5.Rows[0]["Category"].ToString();
                         Combotype.Text = dt5.Rows[0]["TaxType"].ToString();
                         ComboTaxPer.Text = dt5.Rows[0]["TaxPer"].ToString();
-                        TextAccountHead1.Text = dt5.Rows[0]["AccountHead"].ToString();
+                        TextAccountHead1.Text = dt5.Rows[0]["Head"].ToString();
                         Textundergroup.Text = dt5.Rows[0]["AgName1"].ToString();
-                        Combocurrt.Text = dt5.Rows[0]["Status"].ToString();
+                        Combocurrt.Text = dt5.Rows[0]["Active"].ToString();
                         
 
                     }
@@ -185,9 +185,9 @@ namespace BILLING.View.Masters
                         Textcategory.Text = dt5.Rows[0]["Category"].ToString();
                         Combotype.Text = dt5.Rows[0]["TaxType"].ToString();
                         ComboTaxPer.Text = dt5.Rows[0]["TaxPer"].ToString();
-                        TextAccountHead1.Text = dt5.Rows[0]["AccountHead"].ToString();
+                        TextAccountHead1.Text = dt5.Rows[0]["Head"].ToString();
                         Textundergroup.Text = dt5.Rows[0]["AgName1"].ToString();
-                        Combocurrt.Text = dt5.Rows[0]["Status"].ToString();
+                        Combocurrt.Text = dt5.Rows[0]["Active"].ToString();
                         
                     }
                     else
@@ -232,6 +232,7 @@ namespace BILLING.View.Masters
      
         private void button5_Click(object sender, EventArgs e)
         {
+            GroupBox1.Enabled = true;
             check = 0;
             RadioNT.Enabled = true;
             RadioT.Enabled = true;
@@ -320,6 +321,7 @@ namespace BILLING.View.Masters
             ////ListUndergroup.Hide();
             ////GroupBox1.Enabled = false;
             //GroupSave.Hide();
+            GroupBox1.Enabled = false;
             smode = "";
             new1 = "";
             new2 = "";

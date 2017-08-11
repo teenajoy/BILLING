@@ -56,11 +56,10 @@
             this.GroupBox1.Controls.Add(this.TextITEMNAME);
             this.GroupBox1.Controls.Add(this.Label19);
             this.GroupBox1.Controls.Add(this.TextITEMCODE);
-            this.GroupBox1.Location = new System.Drawing.Point(52, 15);
-            this.GroupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupBox1.Enabled = false;
+            this.GroupBox1.Location = new System.Drawing.Point(39, 12);
             this.GroupBox1.Name = "GroupBox1";
-            this.GroupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupBox1.Size = new System.Drawing.Size(1055, 369);
+            this.GroupBox1.Size = new System.Drawing.Size(791, 300);
             this.GroupBox1.TabIndex = 230;
             this.GroupBox1.TabStop = false;
             // 
@@ -68,32 +67,31 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(104, 176);
-            this.Label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label1.Location = new System.Drawing.Point(78, 143);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(87, 18);
+            this.Label1.Size = new System.Drawing.Size(72, 14);
             this.Label1.TabIndex = 220;
             this.Label1.Text = "ITEM Code";
             // 
             // TextITEMNAMENEW
             // 
             this.TextITEMNAMENEW.BackColor = System.Drawing.Color.White;
+            this.TextITEMNAMENEW.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TextITEMNAMENEW.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextITEMNAMENEW.Location = new System.Drawing.Point(255, 274);
-            this.TextITEMNAMENEW.Margin = new System.Windows.Forms.Padding(4);
+            this.TextITEMNAMENEW.Location = new System.Drawing.Point(191, 223);
             this.TextITEMNAMENEW.MaxLength = 50;
             this.TextITEMNAMENEW.Name = "TextITEMNAMENEW";
-            this.TextITEMNAMENEW.Size = new System.Drawing.Size(731, 26);
+            this.TextITEMNAMENEW.Size = new System.Drawing.Size(549, 22);
             this.TextITEMNAMENEW.TabIndex = 218;
+            this.TextITEMNAMENEW.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextITEMNAMENEW_KeyDown);
             // 
             // Label2
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(104, 274);
-            this.Label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label2.Location = new System.Drawing.Point(78, 223);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(131, 18);
+            this.Label2.Size = new System.Drawing.Size(104, 14);
             this.Label2.TabIndex = 219;
             this.Label2.Text = "New ITEM Name";
             // 
@@ -102,10 +100,9 @@
             this.Label20.AutoSize = true;
             this.Label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label20.ForeColor = System.Drawing.Color.Purple;
-            this.Label20.Location = new System.Drawing.Point(443, 20);
-            this.Label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label20.Location = new System.Drawing.Point(332, 16);
             this.Label20.Name = "Label20";
-            this.Label20.Size = new System.Drawing.Size(229, 25);
+            this.Label20.Size = new System.Drawing.Size(186, 20);
             this.Label20.TabIndex = 217;
             this.Label20.Text = "CHANGE ITEM NAME";
             // 
@@ -113,21 +110,20 @@
             // 
             this.TextITEMNAME.BackColor = System.Drawing.Color.White;
             this.TextITEMNAME.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextITEMNAME.Location = new System.Drawing.Point(255, 226);
-            this.TextITEMNAME.Margin = new System.Windows.Forms.Padding(4);
+            this.TextITEMNAME.Location = new System.Drawing.Point(191, 184);
             this.TextITEMNAME.MaxLength = 50;
             this.TextITEMNAME.Name = "TextITEMNAME";
-            this.TextITEMNAME.Size = new System.Drawing.Size(731, 26);
+            this.TextITEMNAME.Size = new System.Drawing.Size(549, 22);
             this.TextITEMNAME.TabIndex = 0;
+            this.TextITEMNAME.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TextITEMNAME_KeyDown);
             // 
             // Label19
             // 
             this.Label19.AutoSize = true;
             this.Label19.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label19.Location = new System.Drawing.Point(104, 226);
-            this.Label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Label19.Location = new System.Drawing.Point(78, 184);
             this.Label19.Name = "Label19";
-            this.Label19.Size = new System.Drawing.Size(93, 18);
+            this.Label19.Size = new System.Drawing.Size(74, 14);
             this.Label19.TabIndex = 202;
             this.Label19.Text = "ITEM Name";
             // 
@@ -135,11 +131,10 @@
             // 
             this.TextITEMCODE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.TextITEMCODE.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextITEMCODE.Location = new System.Drawing.Point(255, 176);
-            this.TextITEMCODE.Margin = new System.Windows.Forms.Padding(4);
+            this.TextITEMCODE.Location = new System.Drawing.Point(191, 143);
             this.TextITEMCODE.Name = "TextITEMCODE";
             this.TextITEMCODE.ReadOnly = true;
-            this.TextITEMCODE.Size = new System.Drawing.Size(140, 26);
+            this.TextITEMCODE.Size = new System.Drawing.Size(106, 22);
             this.TextITEMCODE.TabIndex = 1;
             // 
             // ButtonCancel
@@ -147,10 +142,9 @@
             this.ButtonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonCancel.Image = ((System.Drawing.Image)(resources.GetObject("ButtonCancel.Image")));
             this.ButtonCancel.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonCancel.Location = new System.Drawing.Point(500, 11);
-            this.ButtonCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonCancel.Location = new System.Drawing.Point(375, 9);
             this.ButtonCancel.Name = "ButtonCancel";
-            this.ButtonCancel.Size = new System.Drawing.Size(107, 36);
+            this.ButtonCancel.Size = new System.Drawing.Size(80, 29);
             this.ButtonCancel.TabIndex = 181;
             this.ButtonCancel.Text = "&Cancel";
             this.ButtonCancel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -162,10 +156,9 @@
             this.ButtonSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSave.Image = ((System.Drawing.Image)(resources.GetObject("ButtonSave.Image")));
             this.ButtonSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSave.Location = new System.Drawing.Point(348, 11);
-            this.ButtonSave.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonSave.Location = new System.Drawing.Point(261, 9);
             this.ButtonSave.Name = "ButtonSave";
-            this.ButtonSave.Size = new System.Drawing.Size(107, 36);
+            this.ButtonSave.Size = new System.Drawing.Size(80, 29);
             this.ButtonSave.TabIndex = 180;
             this.ButtonSave.Text = "&Save";
             this.ButtonSave.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -181,11 +174,9 @@
             this.GroupAdd.Controls.Add(this.ButtonSave);
             this.GroupAdd.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.GroupAdd.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.GroupAdd.Location = new System.Drawing.Point(68, 391);
-            this.GroupAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.GroupAdd.Location = new System.Drawing.Point(51, 318);
             this.GroupAdd.Name = "GroupAdd";
-            this.GroupAdd.Padding = new System.Windows.Forms.Padding(4);
-            this.GroupAdd.Size = new System.Drawing.Size(1055, 70);
+            this.GroupAdd.Size = new System.Drawing.Size(791, 57);
             this.GroupAdd.TabIndex = 231;
             this.GroupAdd.TabStop = false;
             // 
@@ -194,10 +185,9 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(644, 11);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(375, 9);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 36);
+            this.button1.Size = new System.Drawing.Size(80, 29);
             this.button1.TabIndex = 182;
             this.button1.Text = "&Exit";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -209,10 +199,9 @@
             this.ButtonSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSearch.Image = ((System.Drawing.Image)(resources.GetObject("ButtonSearch.Image")));
             this.ButtonSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch.Location = new System.Drawing.Point(348, 11);
-            this.ButtonSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.ButtonSearch.Location = new System.Drawing.Point(261, 9);
             this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Size = new System.Drawing.Size(107, 36);
+            this.ButtonSearch.Size = new System.Drawing.Size(80, 29);
             this.ButtonSearch.TabIndex = 2;
             this.ButtonSearch.Text = "&Search";
             this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -221,12 +210,12 @@
             // 
             // FrmChangeItemName
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 497);
+            this.ClientSize = new System.Drawing.Size(905, 404);
             this.Controls.Add(this.GroupAdd);
             this.Controls.Add(this.GroupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmChangeItemName";
             this.Text = "FrmChangeItemName";
             this.Load += new System.EventHandler(this.FrmChangeItemName_Load);

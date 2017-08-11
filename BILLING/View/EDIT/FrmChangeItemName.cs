@@ -39,6 +39,8 @@ namespace BILLING.View.EDIT
             {
                 if (FrmItemMasterSearch.smodevalue == "1")
                 {
+                    GroupBox1.Enabled = true;
+
                     DataTable dt5 = new DataTable();
                     grpid = int.Parse(FrmItemMasterSearch.SetValueForText1);
                     objIMDAL.ItmId = grpid;
@@ -57,7 +59,7 @@ namespace BILLING.View.EDIT
                     ButtonSearch.Visible = false;
                     ButtonSave.Visible = true;
                     ButtonCancel.Visible = true;
-                   // ButtonExit.Visible = false;
+                    button1.Visible = false;
                   
                 }
             }
@@ -73,7 +75,7 @@ namespace BILLING.View.EDIT
             
                 objIMDAL.ItemName = TextITEMNAME.Text;
                 objIMDAL.newitwmname = TextITEMNAMENEW.Text;
-                objIMDAL.itemid = Convert.ToInt32(TextITEMCODE.Text);
+                objIMDAL.ItmId = Convert.ToInt32(TextITEMCODE.Text);
                 
                 DataTable dt4 = new DataTable();
                 dt4 = objIMDAL.InsertItem1();
@@ -82,7 +84,10 @@ namespace BILLING.View.EDIT
                 clearfields();
                 ButtonSave.Visible = false;
                 ButtonSearch.Visible = true;
-                //ButtonExit.Visible = true;
+                button1.Visible = true;
+                ButtonCancel.Visible = false;
+                GroupBox1.Enabled = false;
+     
            
             
         }
@@ -96,6 +101,8 @@ namespace BILLING.View.EDIT
         {
             GroupBox1.Enabled = false;
             ButtonSearch.Visible = true;
+            button1.Visible = true;
+            ButtonCancel.Visible = false;
             ButtonSave.Visible = false;
             clearfields();
         }
@@ -105,6 +112,24 @@ namespace BILLING.View.EDIT
             clearfields();
             this.Hide();
         }
+
+        private void TextITEMNAME_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                TextITEMNAMENEW.Focus();
+            }
+        }
+
+        private void TextITEMNAMENEW_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                ButtonSave.Focus();
+            }
+        }
+
+       
     }
 }
 

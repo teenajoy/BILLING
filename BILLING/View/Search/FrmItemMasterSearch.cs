@@ -10,7 +10,6 @@ using System.Data.SqlClient;
 using BillingDAL;
 using BILLING.View.Masters;
 using BILLING.View.EDIT;
-
 namespace BILLING.View.Search
 {
     public partial class FrmItemMasterSearch : Form
@@ -27,7 +26,6 @@ namespace BILLING.View.Search
             this.Location = new Point(10, 60);
             SearchItemMaster();
         }
-
         public static string SetValueForText1 = "";
         public static string SetValueForText2 = "";
         public static string SetValueForText3 = "";
@@ -44,57 +42,6 @@ namespace BILLING.View.Search
         public static string grpId = "";
         public static string val = "1";
 
-
-        private void ButtonExit_Click(object sender, EventArgs e)
-        {
-            if (FrmCS == "ITEM MASTER")
-            {
-                this.Hide();
-                FrmItemMaster frmitm = new FrmItemMaster();
-                frmitm.Show();
-            }
-            else if (FrmCS == "CHANGE ITEM NAME")
-            {
-                this.Hide();
-                FrmChangeItemName frmitm = new FrmChangeItemName();
-                frmitm.Show();
-            }
-        }
-
-        private void FrmItemMasterSearch_Load(object sender, EventArgs e)
-        {
-            FrmCS = common.Commn;
-            val = "1";
-            smodevalue = FrmItemMaster.smode;
-            if (FrmCS == "ITEM MASTER")
-            {
-                smodevalue = FrmItemMaster.smode;
-                
-            }
-           else if (FrmCS == "CHANGE ITEM NAME")
-            {
-                smodevalue = FrmChangeItemName.smode;
-               
-            }
-        }
-
-        public void SearchItemMaster()
-        {
-            dt = objIMDAL.SearchItemMaster();
-            gdv_ItemMasterSearch.DataSource = dt;
-            gdv_ItemMasterSearch.Columns[0].Width = 68;
-            gdv_ItemMasterSearch.Columns[1].Width = 175;
-            gdv_ItemMasterSearch.Columns[2].Width = 68;
-            gdv_ItemMasterSearch.Columns[3].Width = 76;
-            gdv_ItemMasterSearch.Columns[4].Width = 76;
-            gdv_ItemMasterSearch.Columns[5].Width = 76;
-            gdv_ItemMasterSearch.Columns[6].Width = 76;
-            gdv_ItemMasterSearch.Columns[7].Width = 76;
-            gdv_ItemMasterSearch.Columns[8].Width = 76;
-            gdv_ItemMasterSearch.Columns[9].Width = 68;
-     
-            
-        }
 
         private void gdv_ItemMasterSearch_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -118,14 +65,24 @@ namespace BILLING.View.Search
                 FrmChangeItemName frmitmmstr = new FrmChangeItemName();
                 frmitmmstr.Show();
             }
-
         }
-
-        private void TextGRNAME_TextChanged(object sender, EventArgs e)
+        public void SearchItemMaster()
         {
-            FetchItemMasterGrid();
-        }
+            dt = objIMDAL.SearchItemMaster();
+            gdv_ItemMasterSearch.DataSource = dt;
+            gdv_ItemMasterSearch.Columns[0].Width = 68;
+            gdv_ItemMasterSearch.Columns[1].Width = 175;
+            gdv_ItemMasterSearch.Columns[2].Width = 68;
+            gdv_ItemMasterSearch.Columns[3].Width = 76;
+            gdv_ItemMasterSearch.Columns[4].Width = 76;
+            gdv_ItemMasterSearch.Columns[5].Width = 76;
+            gdv_ItemMasterSearch.Columns[6].Width = 76;
+            gdv_ItemMasterSearch.Columns[7].Width = 76;
+            gdv_ItemMasterSearch.Columns[8].Width = 76;
+            gdv_ItemMasterSearch.Columns[9].Width = 68;
 
+
+        }
         public void FetchItemMasterGrid()
         {
             objIMDAL.Gridval = TextGRNAME.Text;
@@ -141,6 +98,11 @@ namespace BILLING.View.Search
             gdv_ItemMasterSearch.Columns[7].Width = 76;
             gdv_ItemMasterSearch.Columns[8].Width = 76;
             gdv_ItemMasterSearch.Columns[9].Width = 68;
+        }
+
+        private void gdv_ItemMasterSearch_TabIndexChanged(object sender, EventArgs e)
+        {
+            FetchItemMasterGrid();
         }
 
         private void TextGRNAME_KeyDown(object sender, KeyEventArgs e)
@@ -179,6 +141,57 @@ namespace BILLING.View.Search
             }
         }
 
-       
+        private void FrmItemMasterSearching_Load(object sender, EventArgs e)
+        {
+            FrmCS = common.Commn;
+            val = "1";
+          //  smodevalue = FrmItemMaster.smode;
+            if (FrmCS == "ITEM MASTER")
+            {
+                smodevalue = FrmItemMaster.smode;
+
+            }
+            else if (FrmCS == "CHANGE ITEM NAME")
+            {
+                smodevalue = FrmChangeItemName.smode;
+
+            }
+        }
+
+        private void ButtonExit_Click(object sender, EventArgs e)
+        {
+            if (FrmCS == "ITEM MASTER")
+            {
+                this.Hide();
+                FrmItemMaster frmitm = new FrmItemMaster();
+                frmitm.Show();
+            }
+            else if (FrmCS == "CHANGE ITEM NAME")
+            {
+                this.Hide();
+                FrmChangeItemName frmitm = new FrmChangeItemName();
+                frmitm.Show();
+            }
+        }
+
+        private void TextGRNAME_TextChanged(object sender, EventArgs e)
+        {
+            display12();
+        }
+        private void display12()
+        {
+            if (FrmCS == "ITEM MASTER")
+            {
+                FetchItemMasterGrid();
+
+            }
+            if (FrmCS == "CHANGE ITEM NAME")
+            {
+                FetchItemMasterGrid();
+               
+            }
+            
+        }
+
     }
 }

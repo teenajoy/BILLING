@@ -73,6 +73,18 @@ namespace BillingDAL
             get { return _Gridval; }
             set { _Gridval = value; }
         }
+        private int _cid;
+        public int cid
+        {
+            get { return _cid; }
+            set { _cid = value; }
+        }
+        private int _Fid;
+        public int Fid
+        {
+            get { return _Fid; }
+            set { _Fid = value; }
+        }
         public DataTable selectstock()
        {
            dt = objDAL.ExecuteDT("prcItemStockEntry");
@@ -101,6 +113,15 @@ namespace BillingDAL
 
             };
             dt = objDAL.ExecuteDT("FetchStockEntryMasterGrid", parameter);
+            return dt;
+        }
+        public DataTable SearchStock()
+        {
+            SqlParameter[] parameter = new SqlParameter[] {
+            new SqlParameter("@coid",cid),
+            new SqlParameter("@year",Fid),
+            };
+            dt = objDAL.ExecuteDT("Sps_ItemStock", parameter);
             return dt;
         }
     }

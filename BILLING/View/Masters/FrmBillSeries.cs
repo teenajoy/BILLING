@@ -8,12 +8,14 @@ using System.Text;
 using System.Windows.Forms;
 using BillingDAL;
 using BILLING.View.Search;
+using BILLING.View.Login;
 namespace BILLING.View.Masters
 {
     public partial class FrmBillSeries : Form
     {
         BillSeriesMasterDAL objBSDAL = new BillSeriesMasterDAL();
         CmpntLoginDAL objCLDAL = new CmpntLoginDAL();
+        FrmCmpnyLogin objL = new FrmCmpnyLogin();
         public static string FYear = "";
         public static string smode = "";
         string grpid = "";
@@ -155,7 +157,7 @@ namespace BILLING.View.Masters
                     objBSDAL.category = Listcategory.Text;
                     objBSDAL.series = Comboseries.Text;
                     objBSDAL.serialno = Convert.ToInt32(TextserialNo.Text);
-                    objBSDAL.coid = 1;
+                    objBSDAL.coid = FrmCmpnyLogin.CompnId;
                     finyear();
                     objBSDAL.Finyear = FYear.ToString();
                     objBSDAL.Estatus = 0;

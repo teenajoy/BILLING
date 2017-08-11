@@ -131,5 +131,19 @@ namespace BILLING.View.MDI
           FrmCommonSearch frmaduser = new FrmCommonSearch();
             frmaduser.Show();
         }
+
+        private void stockToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            common.Commn = "STOCK PREVIEW";
+            FrmStockPreview frmSp = new FrmStockPreview();
+            frmSp.Show();
+        }
+
+        private void masterItemsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            common.Commn = "ITEM MASTER PREVIEW";
+            FrmItemMsterPreview frmSp = new FrmItemMsterPreview();
+            frmSp.Show();
+        }
     }
 }

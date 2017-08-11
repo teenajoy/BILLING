@@ -132,7 +132,13 @@ namespace BillingDAL
             set { _MaxLevel = value; }
         }
 
+        private string _Newitemname;
 
+        public string newitwmname
+        {
+            get { return _Newitemname; }
+            set { _Newitemname = value; }
+        }
         private int _FyId;
 
         public int FyId
@@ -164,13 +170,7 @@ namespace BillingDAL
             set { _CompId = value; }
         }
 
-        private int _itemid;
 
-        public int itemid
-        {
-            get { return _itemid; }
-            set { _itemid = value; }
-        }
 
         private string _Location;
 
@@ -218,13 +218,7 @@ namespace BillingDAL
             get { return _Description; }
             set { _Description = value; }
         }
-        private string _Newitemname;
 
-        public string newitwmname
-        {
-            get { return _Newitemname; }
-            set { _Newitemname = value; }
-        }
         private decimal _PPrice;
 
         public decimal PPrice
@@ -405,7 +399,7 @@ namespace BillingDAL
             SqlParameter[] parameter = new SqlParameter[] { 
             new SqlParameter("@ItemName",ItemName),
             new SqlParameter("@ItemName1",newitwmname),
-            new SqlParameter("@ITEMCODE",itemid),
+            new SqlParameter("@ITEMCODE",ItmId),
            
             };
             dt = objDAL.ExecuteDT("sps_Sel_Items_CHANGENAME", parameter);
@@ -466,6 +460,15 @@ namespace BillingDAL
             new SqlParameter("@Gridval",Gridval)
             };
             dt = objDAL.ExecuteDT("FetchItemMasterGrid", parameter);
+            return dt;
+        }
+        public DataTable SearchStock()
+        {
+            SqlParameter[] parameter = new SqlParameter[] {
+            new SqlParameter("@coid",CompId),
+            new SqlParameter("@year",FyId),
+            };
+            dt = objDAL.ExecuteDT("Sps_ItemMaster", parameter);
             return dt;
         }
     }
