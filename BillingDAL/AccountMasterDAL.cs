@@ -214,7 +214,13 @@ namespace BillingDAL
             get { return _group; }
             set { _group = value; }
         }
+        private string _accname;
 
+        public string accname
+        {
+            get { return _accname; }
+            set { _accname = value; }
+        }
         private decimal _OPDRBal;
 
         public decimal OPDRBal
@@ -384,7 +390,14 @@ namespace BillingDAL
             dt = objDAL.ExecuteDT("SearchAccount");
             return dt;
         }
-
+        public DataTable FetchAccountMasterGrid()
+        {
+            SqlParameter[] parameter = new SqlParameter[] {
+            new SqlParameter("@Accname",accname)
+            };
+            dt = objDAL.ExecuteDT("FetchAccountMasterGrid", parameter);
+            return dt;
+        }
         public DataTable FetchAccountDetails()
         {
             SqlParameter[] parameter = new SqlParameter[] { 

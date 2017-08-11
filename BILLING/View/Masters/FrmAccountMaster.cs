@@ -43,7 +43,7 @@ namespace BILLING.View.Masters
         {
             if (int.Parse(FrmCommonSearch.val) != 1)
             {
-                if (FrmCommonSearch.smodeValue == "1")
+                if (FrmCommonSearch.smodevalue == "1")
                 {
                     ClearFields();
                     DisableTextBox();
@@ -105,7 +105,7 @@ namespace BILLING.View.Masters
                         }
                     }
                 }
-                else if (FrmCommonSearch.smodeValue == "2")
+                else if (FrmCommonSearch.smodevalue == "2")
                 {
                     EnableTextBox();
                     GroupBox1.Enabled = true;

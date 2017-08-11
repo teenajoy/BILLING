@@ -90,9 +90,9 @@ namespace BILLING.View.Search
         {
             if (FrmCS == "ACCOUNT MASTER" || FrmCS == "ACCOUNT HEADS LIST")
             {
-                this.WindowState = FormWindowState.Normal;
-                this.Size = new System.Drawing.Size(730, 427);
-                this.groupBox1.Size = new System.Drawing.Size(720, 393);
+                //this.WindowState = FormWindowState.Normal;
+                //this.Size = new System.Drawing.Size(730, 427);
+                //this.groupBox1.Size = new System.Drawing.Size(720, 393);
                 gdv_CommonSearch.Columns[0].Width = 100;
                 gdv_CommonSearch.Columns[1].Width = 283;
                 gdv_CommonSearch.Columns[2].Width = 283;
@@ -100,6 +100,9 @@ namespace BILLING.View.Search
             }
             if (FrmCS == "EMPLOYEE MASTER")
             {
+                //this.WindowState = FormWindowState.Normal;
+                //this.Size = new System.Drawing.Size(730, 427);
+                //this.groupBox1.Size = new System.Drawing.Size(720, 393);
                 gdv_CommonSearch.Columns[0].Width = 100;
                 gdv_CommonSearch.Columns[1].Width = 200;
                 gdv_CommonSearch.Columns[2].Width = 175;
@@ -111,11 +114,17 @@ namespace BILLING.View.Search
             }
             if (FrmCS == "GODOWN MASTER")
             {
+                this.WindowState = FormWindowState.Normal;
+                this.Size = new System.Drawing.Size(730, 427);
+                this.groupBox1.Size = new System.Drawing.Size(720, 393);
                 gdv_CommonSearch.Columns[0].Width = 675;
                 groupBox1.Text = "LIST-GODOWN MASTER";
             }
             if (FrmCS == "BILL SERIES & NOS")
             {
+                //this.WindowState = FormWindowState.Normal;
+                //this.Size = new System.Drawing.Size(730, 427);
+                //this.groupBox1.Size = new System.Drawing.Size(720, 393);
                 gdv_CommonSearch.Columns[0].Width = 200;
                 gdv_CommonSearch.Columns[1].Width = 200;
                 gdv_CommonSearch.Columns[2].Width = 200;
@@ -123,22 +132,26 @@ namespace BILLING.View.Search
             }
             if (FrmCS == "CREATE TAX")
             {
+                //this.WindowState = FormWindowState.Normal;
+                //this.Size = new System.Drawing.Size(730, 427);
+                //this.groupBox1.Size = new System.Drawing.Size(720, 393);
                 gdv_CommonSearch.Columns[0].Width = 0;
                 gdv_CommonSearch.Columns[0].Visible = false;
-                gdv_CommonSearch.Columns[1].Width = 90;
-                gdv_CommonSearch.Columns[2].Width = 75;
+                gdv_CommonSearch.Columns[1].Width = 65;
+                gdv_CommonSearch.Columns[2].Width = 60;
                 gdv_CommonSearch.Columns[3].Width = 55;
-                gdv_CommonSearch.Columns[4].Width = 300;
-                gdv_CommonSearch.Columns[5].Width = 150;
-                gdv_CommonSearch.Columns[6].Width = 0;
-                gdv_CommonSearch.Columns[6].Visible = false;
-                gdv_CommonSearch.Columns[7].Width = 150;
-                gdv_CommonSearch.Columns[8].Width = 94;
+                gdv_CommonSearch.Columns[4].Width = 250;
+                gdv_CommonSearch.Columns[5].Width = 105;
+                gdv_CommonSearch.Columns[6].Width = 100;
+                gdv_CommonSearch.Columns[7].Width = 40;
 
                 groupBox1.Text = "LIST-CREATE TAX";
             }
             if (FrmCS == "ADD USER")
             {
+                //this.WindowState = FormWindowState.Normal;
+                //this.Size = new System.Drawing.Size(730, 427);
+                //this.groupBox1.Size = new System.Drawing.Size(720, 393);
                 gdv_CommonSearch.Columns[0].Width = 150;
                 gdv_CommonSearch.Columns[1].Width = 150;
                 gdv_CommonSearch.Columns[2].Width = 150;
@@ -149,13 +162,18 @@ namespace BILLING.View.Search
         private void ButtonExit_Click(object sender, EventArgs e)
         {
             val = "0";
-            if (FrmCS == "ACCOUNT MASTER" || FrmCS == "ACCOUNT HEADS LIST")
+            if (FrmCS == "ACCOUNT MASTER")
             {
                 this.Hide();
                 FrmAccountMaster frmacnt = new FrmAccountMaster();
                 frmacnt.Show();
             }
-
+            if (FrmCS == "ACCOUNT HEADS LIST")
+            {
+                this.Hide();
+                FrmMDI frmacnt = new FrmMDI();
+                frmacnt.Show();
+            }
             if (FrmCS == "EMPLOYEE MASTER")
             {
                 this.Hide();
@@ -231,6 +249,11 @@ namespace BILLING.View.Search
         }
         private void display12()
         {
+            if (FrmCS == "ACCOUNT MASTER" || FrmCS == "ACCOUNT HEADS LIST")
+            {
+                FetchAccountMasterGrid();
+
+            }
             if (FrmCS == "EMPLOYEE MASTER")
             {
                 FetchItemMasterGrid();
@@ -255,6 +278,9 @@ namespace BILLING.View.Search
         }
         public void FetchItemMasterGrid()
         {
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new System.Drawing.Size(730, 427);
+            this.groupBox1.Size = new System.Drawing.Size(720, 393);
             objEMDAL.Gridval = TextGRNAME.Text;
             dt2 = objEMDAL.FetchEmployeeMasterGrid();
             gdv_CommonSearch.DataSource = dt2;
@@ -266,8 +292,24 @@ namespace BILLING.View.Search
             gdv_CommonSearch.Columns[5].Width = 75;
             gdv_CommonSearch.Columns[6].Width = 100;
         }
+        public void FetchAccountMasterGrid()
+        {
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new System.Drawing.Size(730, 427);
+            this.groupBox1.Size = new System.Drawing.Size(720, 393);
+            objAMDAL.accname = TextGRNAME.Text;
+            dt2 = objAMDAL.FetchAccountMasterGrid();
+            gdv_CommonSearch.DataSource = dt2;
+            gdv_CommonSearch.Columns[0].Width = 100;
+            gdv_CommonSearch.Columns[1].Width = 283;
+            gdv_CommonSearch.Columns[2].Width = 283;
+            groupBox1.Text = "LIST-ACCOUNT MASTER";
+        }
         public void FetchGodownMasterGrid()
         {
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new System.Drawing.Size(730, 427);
+            this.groupBox1.Size = new System.Drawing.Size(720, 393);
             objGDDAL.godownname = TextGRNAME.Text;
             dt2 = objGDDAL.FetchGodownMasterGrid();
             gdv_CommonSearch.DataSource = dt2;
@@ -277,6 +319,9 @@ namespace BILLING.View.Search
         }
         public void FetchBillSeriesMasterGrid()
         {
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new System.Drawing.Size(730, 427);
+            this.groupBox1.Size = new System.Drawing.Size(720, 393);
             objBSMDAL.category = TextGRNAME.Text;
             dt2 = objBSMDAL.FetchBillSeriesMasterGrid();
             gdv_CommonSearch.DataSource = dt2;
@@ -285,6 +330,9 @@ namespace BILLING.View.Search
         }
         public void FetchTAXMasterGrid()
         {
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new System.Drawing.Size(730, 427);
+            this.groupBox1.Size = new System.Drawing.Size(720, 393);
             objCTDAL.Gridval = TextGRNAME.Text;
             objCTDAL.compid = Convert.ToInt32("1");
             objCTDAL.fyid = "1";
@@ -292,20 +340,20 @@ namespace BILLING.View.Search
             gdv_CommonSearch.DataSource = dt2;
             gdv_CommonSearch.Columns[0].Width = 0;
             gdv_CommonSearch.Columns[0].Visible = false;
-            gdv_CommonSearch.Columns[1].Width = 90;
-            gdv_CommonSearch.Columns[2].Width = 75;
+            gdv_CommonSearch.Columns[1].Width = 65;
+            gdv_CommonSearch.Columns[2].Width = 60;
             gdv_CommonSearch.Columns[3].Width = 55;
-            gdv_CommonSearch.Columns[4].Width = 300;
-            gdv_CommonSearch.Columns[5].Width = 150;
-            gdv_CommonSearch.Columns[6].Width = 0;
-            gdv_CommonSearch.Columns[6].Visible = false;
-            gdv_CommonSearch.Columns[7].Width = 150;
-            gdv_CommonSearch.Columns[8].Width = 94;
-
+            gdv_CommonSearch.Columns[4].Width = 250;
+            gdv_CommonSearch.Columns[5].Width = 105;
+            gdv_CommonSearch.Columns[6].Width = 100;
+            gdv_CommonSearch.Columns[7].Width = 40;
 
         }
         public void FetchUserMasterGrid()
         {
+            this.WindowState = FormWindowState.Normal;
+            this.Size = new System.Drawing.Size(730, 427);
+            this.groupBox1.Size = new System.Drawing.Size(720, 393);
             objAUDAL.Gridval = TextGRNAME.Text;
             dt2 = objAUDAL.FetchUserMasterGrid();
             gdv_CommonSearch.DataSource = dt2;

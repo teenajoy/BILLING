@@ -16,7 +16,8 @@ namespace BILLING.View.Login
         CmpntLoginDAL objCLDAL = new CmpntLoginDAL();
         DataTable dt = new DataTable();
         DataTable dt1 = new DataTable();
-
+        public static int CompnId = 0;
+        public static int FYID = 0;
         public FrmCmpnyLogin()
         {
             InitializeComponent();
@@ -119,6 +120,8 @@ namespace BILLING.View.Login
             else
             {
                 this.Hide();
+                CompnId =Convert.ToInt32(cmbCompany.SelectedValue);
+                FYID = Convert.ToInt32(cmbFinancialYear.SelectedValue);
                 FrmLogin objFrmLogin = new FrmLogin();
                 objFrmLogin.ShowDialog();
                 

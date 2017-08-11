@@ -277,6 +277,7 @@
             this.ClientSize = new System.Drawing.Size(697, 531);
             this.Controls.Add(this.GroupAdd);
             this.Controls.Add(this.GroupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmBillSeries";
             this.Text = "FrmBillSeries";
             this.Load += new System.EventHandler(this.FrmBillSeries_Load);

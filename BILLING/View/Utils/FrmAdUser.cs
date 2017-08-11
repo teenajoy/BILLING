@@ -68,6 +68,7 @@ namespace BILLING.View.Utils
             check = 0;
             GroupAdd.Hide();
             GroupSave.Visible = true;
+            GroupBox1.Enabled = true;
         }
         public void clear()
         {

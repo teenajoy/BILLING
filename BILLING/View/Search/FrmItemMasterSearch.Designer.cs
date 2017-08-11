@@ -49,10 +49,10 @@
             this.groupBox1.Controls.Add(this.TextGRNAME);
             this.groupBox1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.groupBox1.ForeColor = System.Drawing.Color.DarkMagenta;
-            this.groupBox1.Location = new System.Drawing.Point(11, 5);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(871, 377);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "LIST-ITEM MASTER";
             // 
@@ -68,6 +68,7 @@
             this.gdv_ItemMasterSearch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gdv_ItemMasterSearch.Location = new System.Drawing.Point(3, 50);
             this.gdv_ItemMasterSearch.Name = "gdv_ItemMasterSearch";
+            this.gdv_ItemMasterSearch.ReadOnly = true;
             this.gdv_ItemMasterSearch.RowHeadersWidth = 25;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
@@ -79,8 +80,8 @@
             this.gdv_ItemMasterSearch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.gdv_ItemMasterSearch.Size = new System.Drawing.Size(862, 322);
             this.gdv_ItemMasterSearch.TabIndex = 7;
+            this.gdv_ItemMasterSearch.TabIndexChanged += new System.EventHandler(this.gdv_ItemMasterSearch_TabIndexChanged);
             this.gdv_ItemMasterSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gdv_ItemMasterSearch_KeyDown);
-           // this.gdv_ItemMasterSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gdv_ItemMasterSearch_KeyPress);
             this.gdv_ItemMasterSearch.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.gdv_ItemMasterSearch_MouseDoubleClick);
             // 
             // TextBox1
@@ -110,10 +111,10 @@
             // 
             this.GroupSave.BackColor = System.Drawing.SystemColors.Control;
             this.GroupSave.Controls.Add(this.ButtonExit);
-            this.GroupSave.Location = new System.Drawing.Point(11, 388);
+            this.GroupSave.Location = new System.Drawing.Point(15, 407);
             this.GroupSave.Name = "GroupSave";
             this.GroupSave.Size = new System.Drawing.Size(871, 42);
-            this.GroupSave.TabIndex = 228;
+            this.GroupSave.TabIndex = 229;
             this.GroupSave.TabStop = false;
             // 
             // ButtonExit
@@ -134,13 +135,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 473);
+            this.ClientSize = new System.Drawing.Size(917, 494);
             this.Controls.Add(this.GroupSave);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmItemMasterSearch";
-            this.Text = "FrmItemMasterSearch";
-            this.Load += new System.EventHandler(this.FrmItemMasterSearch_Load);
+            this.Text = "FrmItemMaster";
+            this.Load += new System.EventHandler(this.FrmItemMasterSearching_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gdv_ItemMasterSearch)).EndInit();

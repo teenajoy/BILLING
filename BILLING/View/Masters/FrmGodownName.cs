@@ -82,6 +82,7 @@ namespace BILLING.View.Masters
         {
             GroupBox1.Enabled = true;
             TextGodown.Enabled = true;
+            TextGodown.Text = "";
             loadbutton1();
         }
 
@@ -119,6 +120,7 @@ namespace BILLING.View.Masters
         {
             loadbutton();
             TextGodown.Text = "";
+            TextGodown.Enabled = false;
         }
 
         private void ButtonSearch_Click(object sender, EventArgs e)
@@ -137,8 +139,9 @@ namespace BILLING.View.Masters
             {
                 if (FrmCommonSearch.smodevalue == "1")
                 {
-                    TextGodown.Enabled = true;
+                    TextGodown.Enabled = false;
                     GroupBox1.Enabled = true;
+                    ButtonDelete.Enabled = true;
                     loadbutton();
                     ButtonNext.Enabled = true;
                     ButtonPrevious.Enabled = true;

@@ -146,6 +146,12 @@
     <Compile Include="View\Masters\FrmItemMaster.Designer.cs">
       <DependentUpon>FrmItemMaster.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Masters\FrmItemMsterPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Masters\FrmItemMsterPreview.Designer.cs">
+      <DependentUpon>FrmItemMsterPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Masters\FrmNewAccountGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,12 @@
     <Compile Include="View\Stock\FrmStockEntry.Designer.cs">
       <DependentUpon>FrmStockEntry.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\Stock\FrmStockPreview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Stock\FrmStockPreview.Designer.cs">
+      <DependentUpon>FrmStockPreview.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\Utils\FrmAdUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -252,6 +264,9 @@
     <EmbeddedResource Include="View\Masters\FrmItemMaster.resx">
       <DependentUpon>FrmItemMaster.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Masters\FrmItemMsterPreview.resx">
+      <DependentUpon>FrmItemMsterPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Masters\FrmNewAccountGroup.resx">
       <DependentUpon>FrmNewAccountGroup.cs</DependentUpon>
     </EmbeddedResource>
@@ -279,6 +294,9 @@
     <EmbeddedResource Include="View\Stock\FrmStockEntry.resx">
       <DependentUpon>FrmStockEntry.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Stock\FrmStockPreview.resx">
+      <DependentUpon>FrmStockPreview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\Utils\FrmAdUser.resx">
       <DependentUpon>FrmAdUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +312,7 @@
     <None Include="BILLINGDataSet.xss">
       <DependentUpon>BILLINGDataSet.xsd</DependentUpon>
     </None>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
